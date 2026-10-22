@@ -4,7 +4,11 @@ Bash-based Linux monitoring and incident response toolkit.
 Full specification: @docs/SPEC.md
 
 ## Status
-- Starting Phase 1 (foundation). Nothing is built yet.
+- Phase 1 (foundation) done: CLI, config loader/validator, logging, deps
+  check, tests. Phase 1 was written by Claude at my explicit request
+  (2026-10-22); the "I write all the code" rule below applies again from
+  Phase 2 unless I say otherwise.
+- ShellCheck not yet run (not installed). `make` not installed, so no Makefile.
 
 ## How I want to work (I am a student; this is my resume project)
 - I write ALL the code myself. Do NOT create or edit project files unless I

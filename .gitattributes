@@ -1,0 +1,6 @@
+# Shell scripts and configs must use LF line endings, even if edited from
+# Windows: a CRLF in a script makes Bash see commands like "exit 0\r".
+*.sh        text eol=lf
+*.example   text eol=lf
+*.md        text eol=lf
+.shellcheckrc text eol=lf

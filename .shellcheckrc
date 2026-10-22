@@ -1,0 +1,10 @@
+# ShellCheck configuration. Run from the repository root:
+#   shellcheck sentinelops.sh scripts/*.sh tests/*.sh
+
+# All scripts are Bash, even library files without a shebang-executable bit.
+shell=bash
+
+# Follow `source` statements so variables and functions defined in sourced
+# files are known. `# shellcheck source=...` paths are relative to the repo root.
+external-sources=true
+source-path=.

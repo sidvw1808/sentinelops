@@ -1,0 +1,17 @@
+# Machine-specific configuration (copy from the *.example files)
+config/*.conf
+
+# Generated output; keep the directories themselves
+logs/*
+!logs/.gitkeep
+reports/*
+!reports/.gitkeep
+
+# Secrets must never be committed
+.env
+*.secret
+
+# Editor and temporary files
+*.swp
+*~
+*.tmp

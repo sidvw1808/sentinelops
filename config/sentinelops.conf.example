@@ -1,0 +1,46 @@
+# SentinelOps configuration (example)
+#
+# Copy this file to config/sentinelops.conf and edit it. That copy is ignored
+# by Git, so machine-specific settings stay out of the repository.
+#
+# Format rules (full reference: docs/CONFIGURATION.md):
+#   - One KEY=value per line. Lines starting with # are comments.
+#   - Quotes are optional; use them for values with spaces: KEY="a b".
+#   - No inline comments: "KEY=80 # note" makes the value "80 # note".
+#   - Nothing is executed: $(...), `...` and $VAR are taken literally.
+#   - Unknown keys and duplicate keys are errors.
+
+# --- Thresholds (integer percentages, WARNING must be lower than CRITICAL) ---
+CPU_WARNING=80
+CPU_CRITICAL=90
+
+MEMORY_WARNING=80
+MEMORY_CRITICAL=90
+
+DISK_WARNING=80
+DISK_CRITICAL=90
+
+# --- Scheduling ---
+# Seconds between checks in repeated mode (1-86400).
+CHECK_INTERVAL=60
+
+# --- Modules (true or false) ---
+ENABLE_CPU=true
+ENABLE_MEMORY=true
+ENABLE_DISK=true
+ENABLE_PROCESS=true
+ENABLE_SERVICES=true
+ENABLE_NETWORK=true
+ENABLE_LOG_ANALYSIS=true
+
+# --- Output directories ---
+# Relative paths are resolved against the SentinelOps directory, not the
+# current working directory, so cron and manual runs use the same place.
+LOG_DIRECTORY="./logs"
+REPORT_DIRECTORY="./reports"
+
+# --- Targets (comma-separated; leave empty for none) ---
+# Process names as shown by `ps -o comm=` (max 15 characters on Linux).
+MONITORED_PROCESSES=sshd,cron
+# systemd unit names.
+MONITORED_SERVICES=ssh.service,cron.service
