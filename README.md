@@ -12,6 +12,7 @@ to track incidents from detection to recovery, with no agents, daemons or framew
 ![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20WSL2-FCC624?logo=linux&logoColor=black)
 ![Dependencies](https://img.shields.io/badge/runtime%20deps-coreutils%20only-blue)
 ![Status](https://img.shields.io/badge/status-phase%201%20of%208-orange)
+![License: MIT](https://img.shields.io/badge/license-MIT-green)
 
 [Highlights](#-highlights) ·
 [Demo](#-demo) ·
@@ -360,6 +361,10 @@ sentinelops/
 - `--json` currently covers `version` and `validate-config`.
 - Symlinked installs rely on GNU `readlink -f`.
 - No protection against concurrent runs yet (Phase 5).
+
+## 📄 License
+
+[MIT](LICENSE) © 2026 Siddhanth Waghmare
 
 ---
 
